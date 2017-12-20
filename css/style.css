@@ -339,6 +339,91 @@ LAYOUT
             grid-template-columns: 1fr 1fr;
             grid-gap: 10px;
         }
+
+        
+              article.main {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title detail detail" "intro detail detail" "text map map";
+        margin: .5em;
+    }
+        
+        
+        .home .main {
+            /*this also uses other grid settings from article.main */
+            margin: .5em;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(4, max-content);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "hero       hero         hero   hero" "home-intro home-intro   place1 place2" "place3     place3       place4 place4";
+        }
+        .home .hero-home {
+            grid-area: hero;
+            width: 1200;
+            height: 400;
+        }
+        .home .home-intro {
+            grid-area: home-intro;
+        }
+        .home .place.one {
+            grid-area: place1;
+            grid-gap: 10px;
+        }
+        .home .place.two {
+            grid-area: place2;
+            grid-gap: 10px;
+        }
+        .home .place.three {
+            grid-area: place3;
+            grid-gap: 10px;
+        }
+        .home .place.four {
+            grid-area: place4;
+            grid-gap: 10px;
+        }
+        
+/*        Layout for place pages and about page*/*/
+        /*.lifesaver {
+            grid-area: hero;
+            float: top, display: grid;
+            grid-template-columns: 2fr 2fr;
+        }*/
+        .staten {
+            grid-area: hero;
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .freedom-tower {
+            grid-area: hero;
+            /*width: 1200;
+            height: 400;
+            float: top, display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;*/
+        }
+        .fiterman {
+            grid-area: hero;
+            width: 1200;
+            height: 400;
+            float: top, display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        
+        /*    about page layout */
+        .about {
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            grid-gap: 10px;
+        }
         /* .freedomtower{
             grid-area: hero;
             display: grid;
