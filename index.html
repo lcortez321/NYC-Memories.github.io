@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>911 Sites Around New York City</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css"> </head>
+
+<body class="home placename placepage">
+    <header class="header">
+        <h1 class="logo"><a href="#">NYC Memories</a></h1> <a id="menu-icon">&#9776; Menu</a>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="lifesaver.html">Wall Street Plaza</a></li>
+                <li><a href="staten.html">Staten Island Memorial</a></li>
+                <li><a href="freedomtower.html">Freedom Tower</a></li>
+                <li><a href="fitermanhall.html">Fiterman Hall</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="hero-home">
+            <img src="images/resize-new-2.jpg" alt="wall street plaza" />
+        </div>
+        <!--<div class="home-title">
+        <h1>NYC Memories</h1>
+        
+        </div>-->
+        <div class="home-intro">
+            <h1>This site is dedicated to the 2,977 victims who died on September 11, 2001.</h1>
+
+            <h2>Photos by Luis Cortez</h2>
+
+
+            <p>On this page, you will find links to Wall Street Plaza, the Staten Island Memorial, Freedom Tower and Fiternman Hall.</p>
+
+            <p>Wall Street Plaza is a small Plaza located in Lower Manhattan. It holds a special place in our memories for some of us New Yorkers. It was there that some of us New Yorkers spent a brief moment that seemed like it was frozen in time, in our darkest hour.</p>
+
+            <p> You can also view pictures and read about the Staten Island Memorial, located on Staten Island New York. Photos are by Daniel Castillo. It is a Memorial dedicated to some of the victims that died on 911.</p>
+
+            <p> You will also find pictures of the New York Freedom Tower, located in Lower Manhattan. It is dedicated to all the victims who perished on 911. It is also where many businesses have their offices located. It is a financial hub in New York City.</p>
+
+            <p> Fiterman Hall is one of the many campuses at BMCC. On this site, you can view and read about Fiterman Hall, and the role it played in the history of 911.</p>
+
+        </div>
+        <div class="place one">
+            <div class="image">
+                <a href="staten.html"></a>
+                <a href="staten.html"><img src="images/staten-island-memorial-8.jpg" alt="Staten Island Memorial" /></a>
+            </div>
+            <p><strong><a href="staten.html">Staten Island 911 Memorial. Click on image. Photo by Daniel Castillo</a></strong></p>
+        </div>
+        <div class="place two">
+            <div class="image">
+                <a href="lifesaver.html"></a>
+                <a href="lifesaver.html"><img src="images/plaza-with-waterfall-2.jpg" alt="Wall Street Plaza" /></a>
+            </div>
+            <p><strong><a href="lifesaver.html">Wall Street Plaza. Click on image.</a></strong></p>
+        </div>
+        <div class="place three">
+            <div class="image">
+                <a href="freedomtower.html"></a>
+                <a href="freedomtower.html"><img src="images/freedom-tower-3-3.jpg" alt="Freedom Tower" /></a>
+            </div>
+            <p><strong><a href="freedomtower.html">Freedom Tower in NYC. Click on image.</a></strong></p>
+        </div>
+        <div class="place four">
+            <div class="image">
+                <a href="fitermanhall.html"></a>
+                <a href="fitermanhall.html"><img src="images/fiterman-3-4.jpg" alt="Fiterman Hall" /></a>
+            </div>
+            <p><strong><a href="freedomtower.html">Fiterman Hall Click on image.</a></strong></p>
+        </div>
+        <!--<div class="image"><img src="images/WaterFall-4.jpg" alt="South Street Plaza" /></div>-->
+    </div>
+    <footer>
+        <h4>
+            <a href="luis.html">Designed by</a> © Copyright 2017 Luis Cortez.
+
+        </h4>
+    </footer>
+    <!--    This is javascript needed for the navigation to work-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#menu-icon').on('click', function() {
+                $('.navbar').toggleClass('expand');
+                return false;
+            });
+        });
+    </script>
+    <script>
+        $("img").hover(function() {
+            var _this = $(this);
+            var current = _this.attr("src");
+            var swap = _this.attr("swap");
+            _this.attr('src', swap).attr('swap', current);
+        });
+    </script>
+</body>
+
+</html>

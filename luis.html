@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Luis Cortez</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+
+
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+
+        <h1 class="logo"><a href="#">NYC Memories</a></h1> <a id="menu-icon">&#9776; Menu</a>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lifesaver.html">Wall Street Plaza</a></li>
+
+                <li><a href="staten.html">Staten Island Memorial</a></li>
+                <li><a href="freedomtower.html">Freedom Tower</a></li>
+                <li><a href="fitermanhall.html">Fiterman Hall</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="luis.html">Luis</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+
+
+
+
+
+
+    <article class="main">
+        <div class="heroimage">
+            <div class="Profile">
+
+
+                <img src="images/Vacation%20photo-2.jpg" alt="Profile picture" />
+            </div>
+        </div>
+
+        <div class="title">
+
+            <h1>About me Luis Cortez</h1>
+
+
+        </div>
+
+        <div class="introduction">
+
+
+            <p>I am a native New Yorker, born and raised in New York City. I am currently a part-time student at Borough of Manhattan Community College studying Multimedia Programming and I am a full-time worker for the Mayor's office of the City of New York.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="detailimages">
+            <div class="image">
+
+                <a target="_blank" href="images/Profile-pic-4.jpg">
+
+                    <div class="image"><img src="images/Profile-pic-4.jpg" alt="Luis Cortez" /></div>
+                </a>
+                <p>Click on image to enlarge</p>
+                <strong><p>Luis Cortez.</p></strong>
+            </div>
+
+
+        </div>
+
+    </article>
+
+
+    <footer>
+        <h4>
+
+
+            <a href="index.html">Home</a> © Copyright 2017 Luis Cortez.
+
+        </h4>
+
+    </footer>
+
+
+    <!--    This is javascript needed for the navigation to work-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#menu-icon').on('click', function() {
+                $('.navbar').toggleClass('expand');
+                return false;
+            });
+        });
+    </script>
+
+    <script>
+        $("img").hover(function() {
+            var _this = $(this);
+            var current = _this.attr("src");
+            var swap = _this.attr("swap");
+            _this.attr('src', swap).attr('swap', current);
+        });
+    </script>
+
+</body>
+
+</html>

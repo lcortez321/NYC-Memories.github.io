@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Rubik:400,400i,700');
+
+/* Basic Responsive Images and Video*/
+
+img,
+video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+html {
+    font-size: 1em;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.logo {
+    margin: 0;
+}
+
+.maintext {
+    grid-area: text;
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    color: #000000,
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title h2 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    color: #504A4B;
+    line-height: 1.5 em;
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.5 em;
+}
+
+h4 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    color: #ffffff;
+    line-height: 1.5 em;
+}
+
+
+
+h5 {
+    font-size: 1em;
+    line-height: 1;
+    margin: 1.5em 0 0.5em 0;
+    line-height: 1.5 em;
+}
+h6 {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1em 0 0 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.5 em;
+}
+.date {
+    font-style: italic;
+}
+
+/*
+
+=========================
+LAYOUT
+========================
+*/
+
+/*==== BASIC LAYOUT FOR SMALL SCREENS ======*/
+.place {
+    margin-bottom: 2em;
+}
+.place .image {
+    /*    this crops the image at the top of the place on the home page*/
+    
+    height: 0;
+    padding-bottom: 50%;
+    overflow: hidden;
+}
+
+/*===== LAYOUT FOR LARGER SCREENS THAT SUPPORT CSS GRID =====*/
+@supports (grid-area: auto) {
+    /*    ===== LAYOUT FOR THE PLACE PAGES ======*/
+    
+    @media (min-width: 600px) {
+        article.main {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(4, max-content);
+            grid-template-areas: "hero hero hero" "title detail detail" "intro detail detail" "text map map";
+            margin: .5em;
+        }
+        .home .main {
+/*
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(4, max-content);
+            grid-template-areas: "hero hero hero" "title detail detail" "intro detail detail" "text map map";
+            margin: .5em;
+*/
+        }
+        .about article.main {
+/*
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(4, max-content);
+            grid-template-areas: "hero hero hero" "title detail detail" "intro detail detail" "text map map";
+            margin: .5em;
+*/
+        }
+        
+        
+        .heroimage {
+            grid-area: hero;
+            width: 1200;
+            height: 400;
+            float: top,
+        }
+        .title {
+            grid-area: title;
+            text-align: justify;
+        }
+        .home .home-title {
+            grid-area: title;
+            text-align: center;
+        }
+        .introduction {
+            grid-area: intro;
+            font-size: 1.5em;
+            grid-gap: 10px;
+        }
+        .map {
+            grid-area: map;
+            /*        width: 50%;*/
+            /*        height: 25%;*/
+            padding: 0px;
+            text-align: center;
+        }
+        .detailimages {
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .staten .detailimages{
+            grid-template-columns: 1fr 1fr;
+        }
+        /*.lifesaver {
+            grid-area: hero;
+/*            float: top; 
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-gap: 10px;
+        }*/
+        .staten {
+            grid-area: hero;
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .freedom-tower {
+            grid-area: hero;
+            
+/*
+            width: 1200;
+            height: 400;
+*/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .fiterman {
+            grid-area: hero;
+            /*width: 1200;
+            height: 400;
+            float: top, display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;*/
+        }
+        .about {
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            grid-gap: 10px;
+        }
+    }
+    }
+    /*end min-width: 600px */
+    
+    /*
+    ====MEDIUM SCREEN LAYOUT ==========*/
+    @media (min-width: 900px) {
+       /* home page layout for medium and large screens*/
+        
+          article.main {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: "hero hero hero" "title detail detail" "intro detail detail" "text map map";
+        margin: .5em;
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .home .main {
+            /*this also uses other grid settings from article.main */
+            margin: .5em;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(4, max-content);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "hero       hero         hero   hero" "home-intro home-intro   place1 place2" "place3     place3       place4 place4";
+        }
+        .home .hero-home {
+            grid-area: hero;
+            width: 1200;
+            height: 400;
+        }
+        .home .home-intro {
+            grid-area: home-intro;
+        }
+        .home .place.one {
+            grid-area: place1;
+            grid-gap: 10px;
+        }
+        .home .place.two {
+            grid-area: place2;
+            grid-gap: 10px;
+        }
+        .home .place.three {
+            grid-area: place3;
+            grid-gap: 10px;
+        }
+        .home .place.four {
+            grid-area: place4;
+            grid-gap: 10px;
+        }
+        
+/*        Layout for place pages and about page*/*/
+        /*.lifesaver {
+            grid-area: hero;
+            float: top, display: grid;
+            grid-template-columns: 2fr 2fr;
+        }*/
+        .staten {
+            grid-area: hero;
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .freedom-tower {
+            grid-area: hero;
+            /*width: 1200;
+            height: 400;
+            float: top, display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;*/
+        }
+        .fiterman {
+            grid-area: hero;
+            width: 1200;
+            height: 400;
+            float: top, display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        
+        /*    about page layout */
+        .about {
+            grid-area: detail;
+            grid-area: detail;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            grid-gap: 10px;
+        }
+    }
+    /*end min-width 900px */
+    
+    
+    @media (min-width: 1800px) {
+        
+        /*    Home page layout for very large screens*/
+        .home .place {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        /* .freedomtower{
+            grid-area: hero;
+            display: grid;
+            grid-template-columns: 3fr 3fr;*/
+    }
+    
+    */
+
+
+/* end min-width 1800px */
+
+/*    ====== end home page layout =======*/
+
+/*   ======= designed by page layout ======*/
+.profile {
+    /*grid-area: hero;
+    width: 1200;
+    height: 400;
+    float: top: grid-area: detail;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;*/
+}
+
+}
+
+/*end @supports GRID*/
+
+/*
+    
+    ==============
+    General Site Styling
+    ================
+    
+*/
+.information {
+   /*height: 800px;
+    width: 400px;*/
+}
+.mapWrapper {
+    position: relative;
+    /* 
+    Do math with the height of your iframe divided by the width, then converted to percent
+    In this example the height is 400 and the width is 600
+    400 / 600 = .66666667 
+    which is 66.6666667% */
+    padding-bottom: 66.6666667%;
+    height: 0;
+}
+.mapWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/*.span1{
+    grid-column-end: span 1;
+    
+}
+
+.grid .subitems{
+    display: subgrid
+}
+
+.grid .subitems div{
+    background-color: deepskyblue;
+    
+}*/
+footer {
+    background-color: grey;
+    width: 100%;
+    /*    height: 50px;*/
+    text-align: center;
+    padding: 1em 0;
+}
+footer h4 {
+    font-size: 1em;
+}
+@media (min-width: 900px) {
+    footer {
+        padding: 2em;
+    }
+    footer h4 {
+        font-size: 1em;
+    }
+}
